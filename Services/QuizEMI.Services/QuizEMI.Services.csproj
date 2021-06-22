@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <CodeAnalysisRuleSet>..\..\Rules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <AdditionalFiles Include="..\..\stylecop.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.113" PrivateAssets="all">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="TimeZoneConverter" Version="3.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Data\QuizEMI.Data.Common\QuizEMI.Data.Common.csproj" />
+    <ProjectReference Include="..\..\Data\QuizEMI.Data.Models\QuizEMI.Data.Models.csproj" />
+    <ProjectReference Include="..\..\QuizEMI.Common\QuizEMI.Common.csproj" />
+    <ProjectReference Include="..\..\Web\QuizEMI.Web.ViewModels\QuizEMI.Web.ViewModels.csproj" />
+    <ProjectReference Include="..\QuizEMI.Services.Mapping\QuizEMI.Services.Mapping.csproj" />
+    <ProjectReference Include="..\QuizEMI.Services.Messaging\QuizEMI.Services.Messaging.csproj" />
+    <ProjectReference Include="..\QuizEMI.Services.Tools\QuizEMI.Services.Tools.csproj" />
+  </ItemGroup>
+
+</Project>
